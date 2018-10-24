@@ -10,8 +10,8 @@ import io.appium.java_client.android.AndroidDriver;
 
 
 public class AppiumTest {
-
-    public static void main(String[] args) {
+    Activitys atv;
+    public void main(String[] args) {
 
         //Set the Desired Capabilities
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -19,8 +19,8 @@ public class AppiumTest {
         caps.setCapability("udid", "712HFCSD22BVC"); //Give Device ID of your mobile phone
         caps.setCapability("platformName", "Android");
         caps.setCapability("platformVersion", "7.0");
-        caps.setCapability("appPackage", "com.social.connect.clubinclub");
-        caps.setCapability("appActivity", "com.social.connect.clubinclub.presentation.main.MainActivity");
+        caps.setCapability("appPackage", atv.appPackage);
+        caps.setCapability("appActivity", atv.appActivity);
         caps.setCapability("noReset", "true");
 
         //Instantiate Appium Driver
