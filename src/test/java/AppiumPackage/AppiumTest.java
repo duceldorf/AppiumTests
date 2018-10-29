@@ -10,8 +10,8 @@ import io.appium.java_client.android.AndroidDriver;
 
 
 public class AppiumTest {
-    Activitys atv;
-    public void main(String[] args) {
+
+    public static void main(String[] args) {
 
         //Set the Desired Capabilities
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -19,14 +19,13 @@ public class AppiumTest {
         caps.setCapability("udid", "712HFCSD22BVC"); //Give Device ID of your mobile phone
         caps.setCapability("platformName", "Android");
         caps.setCapability("platformVersion", "7.0");
-        caps.setCapability("appPackage", atv.appPackage);
-        caps.setCapability("appActivity", atv.appActivity);
+        caps.setCapability("appPackage", "com.android.vending");
+        caps.setCapability("appActivity", "com.google.android.finsky.activities.MainActivity");
         caps.setCapability("noReset", "true");
 
         //Instantiate Appium Driver
         try {
             AppiumDriver<MobileElement> driver = new AndroidDriver<>(new URL("http://0.0.0.0:4723/wd/hub"), caps);
-
         } catch (MalformedURLException e) {
             System.out.println(e.getMessage());
         }

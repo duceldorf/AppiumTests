@@ -17,13 +17,6 @@ public class GlobalHelper {
 
     public void init() {
 
-        try {
 
-            driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"),
-                    new CapabilitiesManager(apkData).getCapabilities(new Configurator("meizuM6s"))); //xiaomi //meizu
-
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
     }
 }
